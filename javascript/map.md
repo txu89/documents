@@ -4,7 +4,7 @@ map() is a method that creates a new array that runs a function on each element 
 ### Code Examples
 1. 
 ```javascript
-incrementByOne = function (element) {
+incrementByOne = function(element) {
   return element + 1;
 }
 
