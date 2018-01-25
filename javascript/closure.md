@@ -1,21 +1,21 @@
 ## Closure
-A closure is a function within another function that has access to the outer function's variables, parameters, and global variables (even after the outer function returns)
+A closure is a function within another function that has access to the outer function's variables, parameters, and global variables even after the outer function returns
 
 ### Code examples
-1. 
+1.
 ```javascript
 function showName(firstName, lastName) {
   var nameIntro = "Your name is ";
-  function makeFullName() {    
+  function makeFullName() {
     return nameIntro + firstName + " " + lastName;
   }
-  
+
 return makeFullName();
 }
 
 showName("Michael", "Jackson");
 ```
-2. 
+2.
 ```javascript
 function celebrityName(firstName) {
     var nameIntro = "This celebrity is ";
