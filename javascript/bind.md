@@ -1,8 +1,9 @@
 ## .bind()
 Creates a function that sets *this* to the referenced argument
 
-### Examples 
-1. 
+
+### Examples
+1.
 ```javascript
 var foo = {
     x: 3
@@ -19,7 +20,7 @@ var boundFunc = bar.bind(foo);
 boundFunc(); // 3
 ```
 
-2. 
+2.
 ```javascript
 function talk() {
     console.log(this.talk);
@@ -31,20 +32,20 @@ var boundTalk = talk.bind(gandalf);
 boundTalk();
 ```
 
-3. 
+3.
 ```javascript
 this.x = 9;    // this refers to global "window" object here in the browser
 var module = {
   x: 81,
-  getX: function() { 
-    return this.x; 
+  getX: function() {
+    return this.x;
   }
 }
 
 module.getX(); // 81
 
 var retrieveX = module.getX;
-retrieveX();   
+retrieveX();
 // returns 9 - The function gets invoked at the global scope
 
 // Create a new function with 'this' bound to module
