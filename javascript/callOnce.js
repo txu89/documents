@@ -6,14 +6,13 @@
  */
 function callOnce(callback) {
 
-    var isCalled = 0;
+    var isCalled = false;
 
     return function() {
-
-        if (!isCalled) {
+        if (isCalled == false) {
             callback();
         }
-        isCalled = 1;
+        isCalled = true;
     }
 }
 
